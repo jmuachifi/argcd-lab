@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: argocd-lab-deployment
-  namespace: web  # Specify the namespace here
+  namespace: webapp  # Specify the namespace here
 spec:
   replicas: 2
   selector:
@@ -23,7 +23,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: argocd-lab-service
-  namespace: web  # Specify the namespace here
+  namespace: webapp  # Specify the namespace here
 spec:
   type: NodePort
   selector:
